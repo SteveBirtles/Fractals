@@ -1,3 +1,4 @@
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.scene.Group;
 import javafx.scene.Scene;
@@ -12,7 +13,7 @@ public class Main extends Application {
 
     private static final int WIDTH = 1920;
     private static final int HEIGHT = 1080;
-    private static final boolean FULLSCREEN = true;
+    private static final boolean FULLSCREEN = false;
 
     @Override
     public void start(Stage primaryStage) {
@@ -51,6 +52,9 @@ public class Main extends Application {
         Sierpinski i = new Sierpinski(g, 2);
         g.setStroke(Color.RED);
         i.render(WIDTH / 2, 3 * HEIGHT / 4, 0, 300);
+
+        /*Mandelbrot m = new Mandelbrot(g, 250, true);
+        m.render(0, 0, WIDTH, HEIGHT, -0.75, 0, 500);*/
 
     }
 
